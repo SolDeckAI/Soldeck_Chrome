@@ -1,0 +1,48 @@
+{
+  "name": "Soldeck AI",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Token Info and connecting Solana services at your fingertips! Now with voice commands.",
+  "permissions": ["tabs", "storage", "scripting", "microphone", "clipboardWrite"],
+  "host_permissions": [
+    "https://dexscreener.com/*",
+    "https://photon-sol.tinyastro.io/*",
+    "https://gmgn.ai/*",
+    "https://neo.bullx.io/*",
+    "https://pump.fun/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://neo.bullx.io/*"],
+      "js": ["nbx.js"]
+    },
+    {
+      "matches": ["*://photon-sol.tinyastro.io/*"],
+      "js": ["ph.js"]
+    },
+    {
+      "matches": ["*://gmgn.ai/meme*"],
+      "js": ["gmg.js"]
+    },
+    {
+      "matches": [
+        "*://dexscreener.com/*",
+        "*://photon-sol.tinyastro.io/*",
+        "*://gmgn.ai/*",
+        "*://neo.bullx.io/*",
+        "*://pump.fun/*"
+      ],
+      "js": ["voice.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  }
+}

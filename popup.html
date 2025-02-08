@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Soldeck AI</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Soldeck AI</h1>
+    </header>
+
+    <!-- Main View -->
+    <div id="main-view">
+      <p id="message">Loading...</p>
+      <div id="buttons-container" style="display:none; text-align: center;">
+        <button class="soldeck-btn" id="pump-btn">Pump</button>
+        <button class="soldeck-btn" id="bullx-btn">Bullx</button>
+        <button class="soldeck-btn" id="neo-bullx-btn">Neo Bullx</button>
+        <button class="soldeck-btn" id="photon-btn">Photon</button>
+        <button class="soldeck-btn" id="dexs-btn">DexS</button>
+        <button class="soldeck-btn" id="gmgn-btn">GMGN</button>
+        <button class="soldeck-btn" id="trojan-btn">Trojan</button>
+        <button class="soldeck-btn" id="ape-btn">Ape</button>
+      </div>
+      <div id="settings-link-container">
+        <a id="settings-link" href="#">Settings</a>
+      </div>
+    </div>
+
+    <!-- Settings View -->
+    <div id="settings-view" style="display: none;">
+      <h2>Settings</h2>
+      <!-- API Key Section -->
+      <div>
+        <label for="apiKey-input">OpenAI API Key:</label>
+        <input type="text" id="apiKey-input" placeholder="Enter your API key" />
+        <button id="save-apiKey-btn">Save</button>
+        <p id="apiStatus" style="color: green;"></p>
+      </div>
+      <!-- Button Visibility Settings -->
+      <div>
+        <label><input type="checkbox" id="pump-option" />Pump</label><br/>
+        <label><input type="checkbox" id="bullx-option" />Bullx</label><br/>
+        <label><input type="checkbox" id="neo-bullx-option" />Neo Bullx</label><br/>
+        <label><input type="checkbox" id="photon-option" />Photon</label><br/>
+        <label><input type="checkbox" id="dexs-option" />DexS</label><br/>
+        <label><input type="checkbox" id="gmgn-option" />GMGN</label><br/>
+        <label><input type="checkbox" id="trojan-option" />Trojan</label><br/>
+        <label><input type="checkbox" id="ape-option" />Ape</label><br/>
+      </div>
+      <button id="save-options-btn">Save Options</button>
+      <p id="optionsStatus" style="color: green;"></p>
+      <br />
+      <button id="back-btn">Back</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
